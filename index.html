@@ -5,16 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Axiom Systems Consulting | Finance Architecture</title>
-  <meta
-    name="description"
-    content="Axiom Systems Consulting helps finance teams stop rebuilding the same logic every month by designing finance architecture across ERP, reporting, compliance and intelligent finance."
-  />
+  <meta name="description" content="Axiom Systems Consulting helps finance teams stop rebuilding the same logic every month by designing finance architecture across ERP, reporting, compliance and intelligent finance." />
 
   <meta property="og:title" content="Axiom Systems Consulting" />
-  <meta
-    property="og:description"
-    content="Finance Architecture is the missing layer between ERP and Intelligent Finance."
-  />
+  <meta property="og:description" content="Finance Architecture is the missing layer between ERP and Intelligent Finance." />
   <meta property="og:type" content="website" />
 
   <style>
@@ -25,7 +19,6 @@
       --text: #f4f6f8;
       --muted: #b8c2cc;
       --gold: #d7b56d;
-      --gold-soft: rgba(215, 181, 109, 0.12);
       --line: rgba(255,255,255,0.11);
       --shadow: 0 18px 50px rgba(0,0,0,0.28);
       --radius: 18px;
@@ -57,7 +50,7 @@
       top: 0;
       z-index: 20;
       backdrop-filter: blur(16px);
-      background: rgba(15, 23, 31, 0.84);
+      background: rgba(15,23,31,0.86);
       border-bottom: 1px solid var(--line);
     }
 
@@ -76,28 +69,21 @@
       text-decoration: none;
     }
 
-    .brand-mark {
-      width: 34px;
+    .brand-logo {
+      width: 44px;
       height: 34px;
-      border: 1px solid rgba(215,181,109,0.58);
-      border-radius: 8px;
-      display: grid;
-      place-items: center;
-      color: var(--gold);
-      font-weight: 800;
-      letter-spacing: -0.04em;
-      background: linear-gradient(145deg, rgba(215,181,109,0.12), rgba(255,255,255,0.02));
+      object-fit: contain;
     }
 
     .brand-text {
       display: flex;
       flex-direction: column;
-      line-height: 1.05;
+      line-height: 1.04;
     }
 
     .brand-text strong {
       color: var(--gold);
-      font-size: 0.86rem;
+      font-size: 0.83rem;
       letter-spacing: 0.17em;
       text-transform: uppercase;
     }
@@ -105,7 +91,7 @@
     .brand-text span {
       margin-top: 5px;
       color: #8f9aa5;
-      font-size: 0.66rem;
+      font-size: 0.64rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
@@ -143,9 +129,9 @@
     .eyebrow { margin-bottom: 24px; }
 
     h1 {
-      max-width: 960px;
+      max-width: 980px;
       margin: 0;
-      font-size: clamp(3.5rem, 8vw, 7.2rem);
+      font-size: clamp(3.4rem, 7.5vw, 7rem);
       line-height: 0.98;
       letter-spacing: -0.055em;
     }
@@ -154,7 +140,7 @@
       display: block;
       color: var(--gold);
       margin-top: 18px;
-      font-size: 0.48em;
+      font-size: 0.47em;
       line-height: 1.15;
       letter-spacing: -0.035em;
     }
@@ -241,19 +227,16 @@
     .architecture {
       display: grid;
       gap: 16px;
-      justify-items: stretch;
     }
 
     .architecture-top,
     .architecture-bottom {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 14px;
     }
 
-    .architecture-bottom {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
+    .architecture-top { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .architecture-bottom { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
     .node {
       min-height: 112px;
@@ -278,8 +261,7 @@
       margin: 10px 0;
       border: 1px solid rgba(215,181,109,0.6);
       border-radius: 16px;
-      background:
-        linear-gradient(135deg, rgba(215,181,109,0.16), rgba(27,40,52,0.94));
+      background: linear-gradient(135deg, rgba(215,181,109,0.16), rgba(27,40,52,0.94));
       padding: 30px;
       box-shadow: inset 0 0 0 1px rgba(255,255,255,0.025);
     }
@@ -353,9 +335,7 @@
       color: var(--muted);
     }
 
-    .engagement-strip {
-      padding-top: 0;
-    }
+    .engagement-strip { padding-top: 0; }
 
     .engagement-item {
       min-height: 116px;
@@ -379,8 +359,7 @@
       border: 1px solid rgba(215,181,109,0.38);
       border-radius: 22px;
       padding: 42px;
-      background:
-        linear-gradient(135deg, rgba(215,181,109,0.12), rgba(22,33,43,0.92));
+      background: linear-gradient(135deg, rgba(215,181,109,0.12), rgba(22,33,43,0.92));
       box-shadow: var(--shadow);
     }
 
@@ -446,9 +425,34 @@
 
     .about {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 56px;
-      align-items: start;
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .portrait-frame {
+      position: relative;
+      max-width: 410px;
+      margin: 0 auto;
+    }
+
+    .portrait-frame::before {
+      content: "";
+      position: absolute;
+      inset: 18px -18px -18px 18px;
+      border: 1px solid rgba(215,181,109,0.45);
+      border-radius: 22px;
+      z-index: 0;
+    }
+
+    .portrait {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      display: block;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
     }
 
     .about-copy {
@@ -457,10 +461,11 @@
     }
 
     .about-box {
+      margin-top: 30px;
       border: 1px solid var(--line);
       background: var(--panel);
       border-radius: var(--radius);
-      padding: 30px;
+      padding: 28px;
     }
 
     .about-box strong {
@@ -494,6 +499,22 @@
       font-size: 0.88rem;
     }
 
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+
     @media (max-width: 1020px) {
       .architecture-top,
       .architecture-bottom,
@@ -512,7 +533,6 @@
 
     @media (max-width: 700px) {
       .nav-links { display: none; }
-
       .brand-text span { display: none; }
 
       .hero {
@@ -521,7 +541,6 @@
       }
 
       h1 { font-size: clamp(3rem, 15vw, 5.2rem); }
-
       section { padding: 84px 0; }
 
       .architecture-top,
@@ -547,7 +566,7 @@
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand-lockup" href="#top" aria-label="Axiom Systems Consulting home">
-        <div class="brand-mark">A</div>
+        <img class="brand-logo" src="axiom-logo.png" alt="" />
         <div class="brand-text">
           <strong>Axiom</strong>
           <span>Systems Consulting</span>
@@ -570,7 +589,7 @@
         <div class="eyebrow">Finance Architecture</div>
 
         <h1>
-          Finance should not start from zero every month.
+          Your finance team should not have to rebuild the same logic every month.
           <span>Finance Architecture is the missing layer between ERP and Intelligent Finance.</span>
         </h1>
 
@@ -580,12 +599,7 @@
 
         <div class="hero-actions">
           <a class="button button-primary" href="#architecture">See where Axiom fits</a>
-          <a
-            class="button button-secondary"
-            href="https://www.linkedin.com/in/samir-bhatia-bb61691/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="button button-secondary" href="https://www.linkedin.com/in/samir-bhatia-bb61691/" target="_blank" rel="noopener noreferrer">
             Connect on LinkedIn
           </a>
         </div>
@@ -596,7 +610,7 @@
       </div>
     </section>
 
-    <section id="architecture">
+    <section id="architecture" class="reveal">
       <div class="container">
         <div class="section-label">Where Axiom fits</div>
         <h2>The business logic should sit between transactions and outcomes.</h2>
@@ -607,22 +621,10 @@
         <div class="architecture-wrap">
           <div class="architecture">
             <div class="architecture-top">
-              <div class="node">
-                <strong>CRM</strong>
-                <small>Customers, contracts and commercial context</small>
-              </div>
-              <div class="node">
-                <strong>Billing</strong>
-                <small>Invoices, pricing and transaction creation</small>
-              </div>
-              <div class="node">
-                <strong>Banking &amp; PSPs</strong>
-                <small>Receipts, settlements, fees and reversals</small>
-              </div>
-              <div class="node">
-                <strong>Other Operational Systems</strong>
-                <small>Source data used by Finance</small>
-              </div>
+              <div class="node"><strong>CRM</strong><small>Customers, contracts and commercial context</small></div>
+              <div class="node"><strong>Billing</strong><small>Invoices, pricing and transaction creation</small></div>
+              <div class="node"><strong>Banking &amp; PSPs</strong><small>Receipts, settlements, fees and reversals</small></div>
+              <div class="node"><strong>Other Operational Systems</strong><small>Source data used by Finance</small></div>
             </div>
 
             <div class="flow-arrow">↓</div>
@@ -649,58 +651,39 @@
             <div class="flow-arrow">↓</div>
 
             <div class="architecture-bottom">
-              <div class="node">
-                <strong>Reporting</strong>
-                <small>Persistent and queryable management information</small>
-              </div>
-              <div class="node">
-                <strong>Controls &amp; Operations</strong>
-                <small>Ageing, collections, reconciliation and exception management</small>
-              </div>
-              <div class="node">
-                <strong>Intelligent Finance</strong>
-                <small>Automation, analytics and AI with business context</small>
-              </div>
+              <div class="node"><strong>Reporting</strong><small>Persistent and queryable management information</small></div>
+              <div class="node"><strong>Controls &amp; Operations</strong><small>Ageing, collections, reconciliation and exception management</small></div>
+              <div class="node"><strong>Intelligent Finance</strong><small>Automation, analytics and AI with business context</small></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="capabilities">
+    <section id="capabilities" class="reveal">
       <div class="container">
         <div class="section-label">Capabilities</div>
         <h2>From repeated reconstruction to persistent finance logic.</h2>
-        <p class="section-intro">
-          Engagements are designed around the practical gap between Finance and IT.
-        </p>
+        <p class="section-intro">Engagements are designed around the practical gap between Finance and IT.</p>
 
         <div class="services-grid">
           <article class="card">
             <h3>Finance Architecture</h3>
-            <p>
-              Design governed finance data and business-rule layers that make transaction states, controls and reporting logic persistent and queryable.
-            </p>
+            <p>Design governed finance data and business-rule layers that make transaction states, controls and reporting logic persistent and queryable.</p>
           </article>
-
           <article class="card">
             <h3>Reporting Architecture</h3>
-            <p>
-              Replace repeated spreadsheet reconstruction with controlled, reusable logic for ageing, reconciliation and management reporting.
-            </p>
+            <p>Replace repeated spreadsheet reconstruction with controlled, reusable logic for ageing, reconciliation and management reporting.</p>
           </article>
-
           <article class="card">
             <h3>UAE E-Invoicing</h3>
-            <p>
-              Prepare for compliance while using the same implementation to strengthen validation, finance architecture and downstream reporting.
-            </p>
+            <p>Prepare for compliance while using the same implementation to strengthen validation, finance architecture and downstream reporting.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="engagement-strip">
+    <section class="engagement-strip reveal">
       <div class="container">
         <div class="section-label">Typical engagement areas</div>
         <div class="engagement-grid">
@@ -714,7 +697,7 @@
       </div>
     </section>
 
-    <section id="guide">
+    <section id="guide" class="reveal">
       <div class="container">
         <div class="guide">
           <div>
@@ -724,12 +707,7 @@
               A practical perspective on how organisations can use the UAE e-invoicing mandate to strengthen finance data, business rules and reporting architecture.
             </p>
             <div class="hero-actions">
-              <a
-                class="button button-primary"
-                href="uae-e-invoicing-brochure.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a class="button button-primary" href="uae-e-invoicing-brochure.pdf" target="_blank" rel="noopener noreferrer">
                 View the guide
               </a>
             </div>
@@ -745,86 +723,64 @@
       </div>
     </section>
 
-    <section id="thinking">
+    <section id="thinking" class="reveal">
       <div class="container">
         <div class="section-label">Selected thinking</div>
         <h2>Ideas at the intersection of Finance, systems and business logic.</h2>
-        <p class="section-intro">
-          A selection of articles published on LinkedIn.
-        </p>
+        <p class="section-intro">A selection of articles published on LinkedIn.</p>
 
         <div class="thinking-grid">
           <a class="card article-card" href="https://www.linkedin.com/feed/update/urn:li:share:7476886422105313280/" target="_blank" rel="noopener noreferrer">
-            <div>
-              <div class="category">UAE E-Invoicing</div>
-              <h3>UAE E-Invoicing</h3>
-              <p>Why readiness begins with finance data, tax logic and business rules—not merely connectivity.</p>
-            </div>
+            <div><div class="category">UAE E-Invoicing</div><h3>UAE E-Invoicing</h3><p>Why readiness begins with finance data, tax logic and business rules—not merely connectivity.</p></div>
             <div class="read">Read on LinkedIn →</div>
           </a>
-
           <a class="card article-card" href="https://www.linkedin.com/feed/update/urn:li:activity:7478303963893850112/" target="_blank" rel="noopener noreferrer">
-            <div>
-              <div class="category">Beyond Compliance</div>
-              <h3>The biggest opportunity in UAE e-invoicing has nothing to do with compliance.</h3>
-              <p>Using the mandate as a catalyst for better finance architecture and intelligent finance.</p>
-            </div>
+            <div><div class="category">Beyond Compliance</div><h3>The biggest opportunity in UAE e-invoicing has nothing to do with compliance.</h3><p>Using the mandate as a catalyst for better finance architecture and intelligent finance.</p></div>
             <div class="read">Read on LinkedIn →</div>
           </a>
-
           <a class="card article-card" href="https://www.linkedin.com/feed/update/urn:li:activity:7451827234811838464/" target="_blank" rel="noopener noreferrer">
-            <div>
-              <div class="category">Reconciliation</div>
-              <h3>Same reconciliation. Same issues. Every month.</h3>
-              <p>Why repeated month-end work is usually an architecture problem, not an effort problem.</p>
-            </div>
+            <div><div class="category">Reconciliation</div><h3>Same reconciliation. Same issues. Every month.</h3><p>Why repeated month-end work is usually an architecture problem, not an effort problem.</p></div>
             <div class="read">Read on LinkedIn →</div>
           </a>
-
           <a class="card article-card" href="https://www.linkedin.com/feed/update/urn:li:activity:7457262813221240832/" target="_blank" rel="noopener noreferrer">
-            <div>
-              <div class="category">Vendor Management</div>
-              <h3>Vendor Scorecard</h3>
-              <p>Moving beyond compliance to supplier performance, control and working-capital insight.</p>
-            </div>
+            <div><div class="category">Vendor Management</div><h3>Vendor Scorecard</h3><p>Moving beyond compliance to supplier performance, control and working-capital insight.</p></div>
             <div class="read">Read on LinkedIn →</div>
           </a>
-
           <a class="card article-card" href="https://www.linkedin.com/feed/update/urn:li:activity:7455092261870096384/" target="_blank" rel="noopener noreferrer">
-            <div>
-              <div class="category">Invoice Lifecycle</div>
-              <h3>This is one invoice.</h3>
-              <p>One transaction, many downstream states—and a case for capturing the logic once.</p>
-            </div>
+            <div><div class="category">Invoice Lifecycle</div><h3>This is one invoice.</h3><p>One transaction, many downstream states—and a case for capturing the logic once.</p></div>
             <div class="read">Read on LinkedIn →</div>
           </a>
         </div>
       </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="reveal">
       <div class="container about">
+        <div class="portrait-frame">
+          <img class="portrait" src="samir-bhatia.webp" alt="Samir Bhatia" />
+        </div>
+
         <div>
           <div class="section-label">About Samir</div>
           <h2>Finance experience, systems thinking.</h2>
           <p class="about-copy">
             Samir Bhatia is a Chartered Accountant working at the intersection of Finance, data and systems. His focus is helping organisations design finance architecture that connects operational systems, ERP, reporting, compliance and intelligent finance.
           </p>
-        </div>
 
-        <aside class="about-box">
-          <strong>Axiom Systems Consulting</strong>
-          <div>
-            Finance Architecture<br />
-            Reporting Architecture<br />
-            UAE E-Invoicing Readiness<br />
-            AI-ready Finance Data
+          <div class="about-box">
+            <strong>Axiom Systems Consulting</strong>
+            <div>
+              Finance Architecture<br />
+              Reporting Architecture<br />
+              UAE E-Invoicing Readiness<br />
+              AI-ready Finance Data
+            </div>
           </div>
-        </aside>
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section id="contact" class="contact reveal">
       <div class="container contact-inner">
         <div>
           <div class="section-label">Contact</div>
@@ -835,26 +791,30 @@
         </div>
 
         <div class="contact-actions">
-          <a class="button button-primary" href="mailto:samir@axiomsystemsconsulting.com">
-            Email Samir
-          </a>
-          <a
-            class="button button-secondary"
-            href="https://www.linkedin.com/in/samir-bhatia-bb61691/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
+          <a class="button button-primary" href="mailto:samir@axiomsystemsconsulting.com">Email Samir</a>
+          <a class="button button-secondary" href="https://www.linkedin.com/in/samir-bhatia-bb61691/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      © 2026 Axiom Systems Consulting
-    </div>
+    <div class="container">© 2026 Axiom Systems Consulting</div>
   </footer>
+
+  <script>
+    const revealItems = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealItems.forEach((item) => observer.observe(item));
+  </script>
 </body>
 </html>
